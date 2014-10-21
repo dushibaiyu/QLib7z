@@ -31,10 +31,12 @@ class CCensorNode
   bool CheckPathCurrent(bool include, const UStringVector &pathParts, bool isFile) const;
   void AddItemSimple(bool include, CItem &item);
   bool CheckPath(UStringVector &pathParts, bool isFile, bool &include) const;
+
 public:
-  CCensorNode(): Parent(0) { };
-  CCensorNode(const UString &name, CCensorNode *parent): Name(name), Parent(parent) { };
-  virtual ~CCensorNode();
+  CCensorNode(): Parent(0) {}
+  CCensorNode(const UString &name, CCensorNode *parent):
+      Name(name), Parent(parent) { }
+  virtual ~CCensorNode(){}
   UString Name;
   CObjectVector<CCensorNode> SubNodes;
   CObjectVector<CItem> IncludeItems;
