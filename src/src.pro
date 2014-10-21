@@ -15,10 +15,12 @@ HEADERS +=  lib7z_facade.h \
     errors.h \
     fileio.h \
     range.h \
-    QLib7z_global.h
+    QLib7z_global.h \
+    init.h
 
 SOURCES +=    lib7z_facade.cpp \ 
-    fileio.cpp
+    fileio.cpp \
+    init.cpp
 
 LIBS += -L$$IFW_LIB_PATH/ -l7z
 
