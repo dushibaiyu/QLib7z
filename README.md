@@ -3,7 +3,7 @@ QLib7z
 QLib7z 是从Qt Installer Framework中提取出来的7Z SDK的Qt封装，有压缩，解压，多线程job等。
 
 =========
-编译需要Qt 5 + （个人测试在Qt 5.3.2下。）
+编译需要Qt 5 + （个人测试在Qt 5.4下。）
 系统需求：win,linux，等、、、
 
 =========

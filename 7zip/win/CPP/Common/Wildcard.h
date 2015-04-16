@@ -1,4 +1,4 @@
-﻿// Common/Wildcard.h
+// Common/Wildcard.h
 
 #ifndef __COMMON_WILDCARD_H
 #define __COMMON_WILDCARD_H
@@ -31,12 +31,9 @@ class CCensorNode
   bool CheckPathCurrent(bool include, const UStringVector &pathParts, bool isFile) const;
   void AddItemSimple(bool include, CItem &item);
   bool CheckPath(UStringVector &pathParts, bool isFile, bool &include) const;
-
 public:
-  CCensorNode(): Parent(0) {}
-  CCensorNode(const UString &name, CCensorNode *parent):
-      Name(name), Parent(parent) { }
-  virtual ~CCensorNode(){}
+  CCensorNode(): Parent(0) { };
+  CCensorNode(const UString &name, CCensorNode *parent): Name(name), Parent(parent) { };
   UString Name;
   CObjectVector<CCensorNode> SubNodes;
   CObjectVector<CItem> IncludeItems;

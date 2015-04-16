@@ -1,13 +1,12 @@
-include(../installerfw.pri)
 QT = core
 TARGET = 7z
 TEMPLATE = lib
-#INCLUDEPATH += . ..
 CONFIG += staticlib
 
+include(../lib7z.pri)
 include(7zip.pri)
 
-DESTDIR = $$IFW_LIB_PATH
+DESTDIR = $$QLIB7Z_LIB_PATH
 
 win32 {
     DEFINES += _CRT_SECURE_NO_WARNINGS
