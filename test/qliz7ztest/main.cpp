@@ -1,5 +1,6 @@
 ﻿#include <QCoreApplication>
 #include "lib7z_facade.h"
+#include "init.h"
 #include <QDebug>
 #include <QDir>
 

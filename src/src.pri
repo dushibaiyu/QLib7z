@@ -1,13 +1,6 @@
-TEMPLATE = lib
-TARGET = $$qtLibraryTarget(QLib7z)
-
+DEFINES += QLIB7Z_NOLIB
 include(../7zip/7zip.pri)
 include(../lib7z.pri)
-
-DESTDIR = $$QLIB7Z_LIB_PATH
-DEFINES += QLIB7Z_LIB
-
-QT += core
 
 INCLUDEPATH += $$PWD/../include/
 

@@ -43,7 +43,7 @@
 
 #include <QtCore/QtGlobal>
 
-#ifndef QT_STATIC
+#ifndef QLIB7Z_NOLIB
 #  ifdef QLIB7Z_LIB
 #    define INSTALLER_EXPORT Q_DECL_EXPORT
 #  else

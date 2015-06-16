@@ -13,7 +13,7 @@ test下有qlib7ztest的例子可以工作的。
 只测试支持*.7z格式。*.zip测试未通过。
 其他格式如果您需要请自己测试下。
 只在win下测试，请他平台请先测试后使用。
-
+如果是静态编译，需要再src.pro文件里加上：DEFINES += QLIB7Z_NOLIB
 
 zip压缩解压请参见QuaZip：http://quazip.sourceforge.net/
 

@@ -17,10 +17,10 @@ TEMPLATE = app
 
 SOURCES += main.cpp
 
+include($$PWD/../../src/src.pri)
+#win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../lib/ -lQLib7z
+#else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../lib/ -lQLib7zd
+#else:unix: LIBS += -L$$PWD/../../lib/ -lQLib7z
 
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../lib/ -lQLib7z
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../lib/ -lQLib7zd
-else:unix: LIBS += -L$$PWD/../../lib/ -lQLib7z
-
-INCLUDEPATH += $$PWD/../../include
-DEPENDPATH += $$PWD/../../include
+#INCLUDEPATH += $$PWD/../../include
+#DEPENDPATH += $$PWD/../../include
