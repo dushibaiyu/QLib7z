@@ -16,23 +16,25 @@ int main(int argc, char *argv[])
     Lib7z::extractArchive(&file,QDir::currentPath());
 
     QFile fl("D:/brower.zip");
-    fl.open(QFile::ReadOnly);
+    if (fl.open(QFile::ReadOnly)){
 
-    bool iszip = Lib7z::isSupportedArchive(&fl);
-    qDebug() << iszip;
-    if (iszip)
-    {
-        Lib7z::extractArchive(&fl,QDir::currentPath());
-    }
+        bool iszip = Lib7z::isSupportedArchive(&fl);
+        qDebug() << iszip;
+        if (iszip)
+        {
+            Lib7z::extractArchive(&fl,QDir::currentPath());
+        }
 
-    fl.close();
-    fl.setFileName("D:/brower.7z");
-    fl.open(QFile::ReadOnly);
-    iszip = Lib7z::isSupportedArchive(&fl);
-    qDebug() << iszip;
-    if (iszip)
-    {
-        Lib7z::extractArchive(&fl,QDir::currentPath());
+        fl.close();
+        fl.setFileName("D:/brower.7z");
+        if (fl.open(QFile::ReadOnly)) {
+            iszip = Lib7z::isSupportedArchive(&fl);
+            qDebug() << iszip;
+            if (iszip)
+            {
+                Lib7z::extractArchive(&fl,QDir::currentPath());
+            }
+        }
     }
 
     return a.exec();

@@ -55,8 +55,8 @@ SOURCES += $$7ZIP_BASE/CPP/7zip/Archive/LzmaHandler.cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Archive/SplitHandler.cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Archive/XzHandler.cpp
 
-!static:DEF_FILE += $$7ZIP_BASE/CPP/7zip/Archive/Archive.def
-!static:DEF_FILE += $$7ZIP_BASE/CPP/7zip/Archive/Archive2.def
+#!static:DEF_FILE += $$7ZIP_BASE/CPP/7zip/Archive/Archive.def
+#!static:DEF_FILE += $$7ZIP_BASE/CPP/7zip/Archive/Archive2.def
 
 #$(AR_COMMON_OBJS): ../../Archive/Common/$(*B).cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Archive/Common/CoderMixer2.cpp

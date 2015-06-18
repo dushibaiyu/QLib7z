@@ -1,6 +1,5 @@
-DEFINES += QLIB7Z_NOLIB
-include(../7zip/7zip.pri)
-include(../lib7z.pri)
+
+include($$PWD/7zip/7zip.pri)
 
 INCLUDEPATH += $$PWD/../include/
 
@@ -12,14 +11,8 @@ HEADERS +=  $$PWD/../include/lib7z_facade.h \
     $$PWD/../include/init.h
 
 SOURCES += $$PWD/lib7z_facade.cpp \
-    $$PWD/fileio.cpp \
+    $$PWD/qfileio.cpp \
     $$PWD/init.cpp
-
-LIBS += -L$$QLIB7Z_LIB_PATH/ -l7z
-
-win32-msvc*:POST_TARGETDEPS +=  $$QLIB7Z_LIB_PATH/7z.lib
-win32-g++*:POST_TARGETDEPS +=  $$QLIB7Z_LIB_PATH/lib7z.a
-unix:POST_TARGETDEPS +=  $$QLIB7Z_LIB_PATH/lib7z.a
 
 win32 {
     LIBS += -loleaut32 -luser32     # 7zip

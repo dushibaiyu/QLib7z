@@ -1,4 +1,4 @@
-#include(../../qttest.pri)
+
 QT += core
 QT -= gui
 QT += testlib
@@ -6,8 +6,6 @@ QT += testlib
 
 RESOURCES += data.qrc
 SOURCES = tst_lib7zfacade.cpp
-
-#include(../../7zip/7zip.pri)
 
 
 win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../lib/ -lQLib7z

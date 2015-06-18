@@ -1,3 +1,4 @@
 CONFIG += ordered
 TEMPLATE = subdirs
-SUBDIRS += 7zip src
+#SUBDIRS += 7zip src
+SUBDIRS += src test
