@@ -12,6 +12,7 @@ unix {
     INCLUDEPATH += \
         $$7ZIP_BASE/C \
         $$7ZIP_BASE/CPP \
+        $$7ZIP_BASE/CPP/Common \
         $$7ZIP_BASE/CPP/myWindows \
         $$7ZIP_BASE/CPP/include_windows
 

@@ -7,6 +7,7 @@ SOURCES += $$7ZIP_BASE/CPP/Common/MyVector.cpp
 SOURCES += $$7ZIP_BASE/CPP/Common/Wildcard.cpp
 SOURCES += $$7ZIP_BASE/CPP/Common/MyWindows.cpp
 
+HEADERS += $$7ZIP_BASE/CPP/Common/*.h
 #$(WIN_OBJS): ../../../Windows/$(*B).cpp
 SOURCES += $$7ZIP_BASE/CPP/Windows/FileDir.cpp
 SOURCES += $$7ZIP_BASE/CPP/Windows/FileFind.cpp
@@ -18,6 +19,7 @@ SOURCES += $$7ZIP_BASE/CPP/Windows/Synchronization.cpp
 SOURCES += $$7ZIP_BASE/CPP/Windows/System.cpp
 SOURCES += $$7ZIP_BASE/CPP/Windows/Time.cpp
 
+HEADERS += $$7ZIP_BASE/CPP/Windows/*.h
 #$(7ZIP_COMMON_OBJS): ../../Common/$(*B).cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Common/CreateCoder.cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Common/CWrappers.cpp
@@ -36,6 +38,7 @@ SOURCES += $$7ZIP_BASE/CPP/7zip/Common/StreamObjects.cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Common/StreamUtils.cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Common/VirtThread.cpp
 
+HEADERS += $$7ZIP_BASE/CPP/7zip/Common/*.h
 #$(UI_COMMON_OBJS): ../../UI/Common/$(*B).cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/UI/Common/ArchiveOpenCallback.cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/UI/Common/DefaultName.cpp
@@ -51,11 +54,13 @@ SOURCES += $$7ZIP_BASE/CPP/7zip/UI/Common/UpdateCallback.cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/UI/Common/UpdatePair.cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/UI/Common/UpdateProduce.cpp
 
+HEADERS += $$7ZIP_BASE/CPP/7zip/UI/Common/*.h
 #$(AR_OBJS): ../../Archive/$(*B).cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Archive/LzmaHandler.cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Archive/SplitHandler.cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Archive/XzHandler.cpp
 
+HEADERS += $$7ZIP_BASE/CPP/7zip/Archive/*.h
 #$(AR_COMMON_OBJS): ../../Archive/Common/$(*B).cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Archive/Common/CoderMixer2.cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Archive/Common/CoderMixer2MT.cpp
@@ -67,6 +72,7 @@ SOURCES += $$7ZIP_BASE/CPP/7zip/Archive/Common/OutStreamWithCRC.cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Archive/Common/MultiStream.cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Archive/Common/DummyOutStream.cpp
 
+HEADERS += $$7ZIP_BASE/CPP/7zip/Archive/Common/*.h
 #$(7Z_OBJS): ../../Archive/7z/$(*B).cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Archive/7z/7zDecode.cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Archive/7z/7zEncode.cpp
@@ -83,6 +89,7 @@ SOURCES += $$7ZIP_BASE/CPP/7zip/Archive/7z/7zSpecStream.cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Archive/7z/7zUpdate.cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Archive/7z/7zRegister.cpp
 
+HEADERS += $$7ZIP_BASE/CPP/7zip/Archive/7z/*.h
 #$(COMPRESS_OBJS): ../../Compress/$(*B).cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Compress/Bcj2Coder.cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Compress/Bcj2Register.cpp
@@ -102,6 +109,7 @@ SOURCES += $$7ZIP_BASE/CPP/7zip/Compress/LzmaDecoder.cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Compress/LzmaEncoder.cpp
 SOURCES += $$7ZIP_BASE/CPP/7zip/Compress/LzmaRegister.cpp
 
+HEADERS += $$7ZIP_BASE/CPP/7zip/Compress/*.h
 #$(C_OBJS): ../../../../C/$(*B).c
 SOURCES += $$7ZIP_BASE/C/Alloc.c
 SOURCES += $$7ZIP_BASE/C/Bra.c
@@ -127,5 +135,8 @@ SOURCES += $$7ZIP_BASE/C/XzDec.c
 SOURCES += $$7ZIP_BASE/C/XzEnc.c
 SOURCES += $$7ZIP_BASE/C/Sha256.c
 
-SOURCES += \
-$$7ZIP_BASE/CPP/myWindows/myDateAndTime.cpp
+HEADERS += $$7ZIP_BASE/C/*.h
+
+SOURCES += $$7ZIP_BASE/CPP/myWindows/myDateAndTime.cpp
+
+HEADERS += $$7ZIP_BASE/CPP/myWindows/*.h

@@ -45,7 +45,12 @@
 #include <QVariant>
 #include <QVector>
 
-#include "Common/MyWindows.h"
+#ifdef _WIN32
+#include "private/MyWindowsWin.h"
+#else
+#include "private/MyWindowsUnix.h"
+#endif
+
 
 #include <stdexcept>
 #include <string>
