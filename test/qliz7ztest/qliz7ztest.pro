@@ -22,7 +22,8 @@ SOURCES += main.cpp
 #include($$PWD/../../src/lib7z.pri)
 win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../lib/ -lQLib7z
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../lib/ -lQLib7zd
-else:unix: LIBS += -L$$PWD/../../lib/ -lQLib7z
+
+unix: LIBS += -L$$PWD/../../lib/ -lQLib7z
 
 INCLUDEPATH += $$PWD/../../include
 DEPENDPATH += $$PWD/../../include
